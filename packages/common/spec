@@ -2,4 +2,4 @@
 name: common
 files:
 - common/utils.sh
-- common/bin/*
+- common/bin/monit_debugger
