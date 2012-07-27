@@ -3,7 +3,7 @@
 describe "run RedisLive with postgresql to monitor Redis DBs"
 
 set -u # report the usage of uninitialized variables
-set -x
+# set -x
 
 [ "$(whoami)" != 'root' ] && ( echo ERROR: run as root user; exit 1 )
 
