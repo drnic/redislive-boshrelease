@@ -1,0 +1,12 @@
+# abort script on any command that exit with a non zero value
+set -e
+
+# Variables
+# $BUILD_DIR
+# $RELEASE_DIR
+printenv | grep BUILD_DIR
+# printenv | grep RELEASE_DIR
+
+pwd
+
+ls **/*
