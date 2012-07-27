@@ -5,7 +5,6 @@ dev_releases
 blobs/*
 .blobs
 .dev_builds
-.vagrant
 .idea
 .DS_Store
 .final_builds/jobs/**/*.tgz
@@ -14,3 +13,7 @@ blobs/*
 *~
 *#
 #*
+.vagrant
+vendor/bosh
+.roundup*
+build
