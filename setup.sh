@@ -29,11 +29,10 @@ then
   sudo /opt/sm/bin/sm ext install bosh-solo git://github.com/drnic/bosh-solo.git
   sudo /opt/sm/bin/sm bosh-solo install_dependencies
 
+  touch ~/install_dependencies_complete
+  
   /etc/profile.d/rvm.sh
   rvm 1.9.3 --default
-  
-  sudo mkdir -p /var/vcap
-  touch ~/install_dependencies_complete
   
 fi
 
