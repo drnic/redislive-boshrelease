@@ -31,9 +31,7 @@ then
 
   touch ~/install_dependencies_complete
   
-  /etc/profile.d/rvm.sh
-  rvm 1.9.3 --default
-  
+  sudo echo "rvm 1.9.3 --default" >> /home/vagrant/.bashrc
 fi
 
 # TODO run: sm bosh-solo update examples/dev-solo.yml or rel.yml
