@@ -5,6 +5,7 @@ packages:
 - RedisLive
 - sqlite
 - ruby
+- common
 templates:
   redislive_monitor_ctl:    bin/redislive_monitor_ctl
   redislive_webapp_ctl:     bin/redislive_webapp_ctl
