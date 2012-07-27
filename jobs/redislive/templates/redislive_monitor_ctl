@@ -26,7 +26,8 @@ case $1 in
 
     cd /var/vcap/packages/RedisLive/
 
-    rm redis-live.conf
+    # TODO race condition with redislive_webapp_ctl?
+    rm -rf redis-live.conf
     chmod 755 /var/vcap/jobs/redislive # to access file via symlink
     cp /var/vcap/jobs/redislive/config/redis-live.conf redis-live.conf
 
