@@ -1,0 +1,10 @@
+---
+name: RedisLive
+dependencies:
+- python27
+files:
+- RedisLive/**/*
+- python-pip-RedisLive/six-1.1.0.tar.gz
+- python-pip-RedisLive/python-dateutil-2.1.tar.gz
+- python-pip-RedisLive/redis-2.6.0.tar.gz
+- python-pip-RedisLive/tornado-2.3.tar.gz

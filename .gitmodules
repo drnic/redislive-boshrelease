@@ -1,0 +1,3 @@
+[submodule "src/redislive"]
+	path = src/redislive
+	url = git://github.com/kumarnitin/RedisLive.git

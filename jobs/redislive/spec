@@ -1,0 +1,11 @@
+---
+name: redislive
+packages:
+- python27
+- RedisLive
+- sqlite
+- ruby
+templates:
+  redislive_monitor_ctl:    bin/redislive_monitor_ctl
+  redislive_webapp_ctl:     bin/redislive_webapp_ctl
+  redis-live.conf.erb:      config/redis-live.conf

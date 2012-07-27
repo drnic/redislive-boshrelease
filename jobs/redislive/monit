@@ -1,0 +1,15 @@
+check process redislive_monitor
+  with pidfile /var/vcap/sys/run/redislive/redislive_monitor.pid
+  start program "/var/vcap/packages/common/bin/monit_debugger redislive_monitor
+    /var/vcap/jobs/redislive/bin/redislive_monitor_ctl start"
+  stop program "/var/vcap/packages/common/bin/monit_debugger redislive_monitor
+    /var/vcap/jobs/redislive/bin/redislive_monitor_ctl stop"
+  group vcap
+
+check process redislive_webapp
+  with pidfile /var/vcap/sys/run/redislive/redislive_webapp.pid
+  start program "/var/vcap/packages/common/bin/monit_debugger redislive_webapp
+    /var/vcap/jobs/redislive/bin/redislive_webapp_ctl start"
+  stop program "/var/vcap/packages/common/bin/monit_debugger redislive_webapp
+    /var/vcap/jobs/redislive/bin/redislive_webapp_ctl stop"
+  group vcap

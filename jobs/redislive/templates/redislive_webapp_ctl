@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# Control script to start/stop ruby/rack redislive_webapp webapp
+
+RUN_DIR=/var/vcap/sys/run/redislive
+LOG_DIR=/var/vcap/sys/log/redislive
+STORE=/var/vcap/store/redislive
+PIDFILE=$RUN_DIR/redislive_webapp.pid
+
+export PATH=/var/vcap/packages/python27/bin:$PATH
+export PYTHONPATH=/var/vcap/packages/RedisLive/vendor/lib/python
+
+HOME=${HOME:-/home/vcap}
+
+source /var/vcap/packages/common/utils.sh
+redirect_output 'redislive-webapp'
+
+# TODO - data to /var/vcap/store
+
+case $1 in
+
+  start)
+    mkdir -p $RUN_DIR
+    mkdir -p $LOG_DIR
+    mkdir -p $STORE
+
+    cd /var/vcap/packages/RedisLive/
+
+    rm redis-live.conf
+    chmod 755 /var/vcap/jobs/redislive # to access file via symlink
+    cp /var/vcap/jobs/redislive/config/redis-live.conf redis-live.conf
+    
+    exec ./redis-live.py >>$LOG_DIR/redislive_webapp.stdout.log \
+                  2>>$LOG_DIR/redislive_webapp.stderr.log &
+    echo $! > $PIDFILE
+    ;;
+
+  stop)
+    kill_and_wait $PIDFILE
+    ;;
+
+  logs)
+    cat $LOG_DIR/*
+    ;;
+
+  tail)
+    tail -f $LOG_DIR/*
+    ;;
+
+  clearlogs)
+    rm $LOG_DIR/*
+    ;;
+
+  *)
+  echo "Usage: redislive_webapp_ctl {start|stop|logs|tail|clearlogs}" ;;
+esac
+exit 0
