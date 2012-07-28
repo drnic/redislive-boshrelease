@@ -45,4 +45,64 @@ bosh upload release
 bosh deployment path/to/deployments/redislive-dev.yml
 ```
 
+### Development with Vagrant
+
+This project includes development support within Vagrant
+
+```
+$ vagrant up
+[default] Booting VM...
+[default] Waiting for VM to boot. This can take a few minutes.
+[default] VM booted and ready for use!
+[default] Mounting shared folders...
+[default] -- bosh-src: /bosh
+[default] -- v-root: /vagrant
+
+$ vagrant ssh
+```
+
+Inside the VM:
+
+```
+[as vagrant user]
+sudo su -
+
+[as root]
+cd /vagrant
+rvm 1.9.3 --default
+sm bosh-solo update examples/redis_password.yml
+sm bosh-solo tail_logs -f
+```
+
+### Testing new development releases
+
+Whenever you make changes to your BOSH release, including updating the RedisLive source code (at `src/redislive`), then it is a simple process to create a new development release and deploy it into your vagrant VM:
+
+```
+[outside vagrant]
+bosh create release --force
+
+[inside vagrant as root user]
+cd /vagrant
+sm bosh-solo update examples/redis_password.yml
+sudo sm bosh-solo tail_logs -f
+```
+
+All logs will be sent to the terminal so you can watch for any errors as quickly as possible.
+
+### Finalizing and uploading a release
+
+If you create a final release `bosh create release --final`, you must immediately create a new development release. Yeah, this is a bug I guess.
+
+```
+[outside vagrant]
+bosh create release --final
+bosh upload release
+
+bosh create release
+
+[inside vagrant as root user]
+sm bosh-solo update examples/redis_password.yml
+```
+
 
