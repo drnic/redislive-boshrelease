@@ -1,0 +1,36 @@
+--- 
+packages: 
+- name: common
+  version: 1
+  sha1: 0da3522b1764d38efb9172a595bed91a2677c8ca
+  dependencies: []
+
+- name: python27
+  version: 1
+  sha1: b3042e79e15453430f8706d22dd7a8a6e5c23248
+  dependencies: []
+
+- name: redis
+  version: 1
+  sha1: 98c6612c09fefc541bcd07a22833324ffed0b5d6
+  dependencies: []
+
+- name: RedisLive
+  version: 1
+  sha1: 929e6b9cd408ddfc259f4e01cd9f3cb62c841841
+  dependencies: 
+  - python27
+- name: sqlite
+  version: 1
+  sha1: 726bb4c3a12f353c3bad4ef2e0f21c8c79cfb33c
+  dependencies: []
+
+jobs: 
+- name: redis
+  version: 1
+  sha1: 6f0af58e5bbd5d739cfcb1bd08178a182b964f6c
+- name: redislive
+  version: 2
+  sha1: 072de3fe1d17a971b03ad84cb1d70f5e7239bd13
+name: redislive
+version: 2
