@@ -26,6 +26,43 @@ A complete example BOSH deployment manifest is [available](https://gist.github.c
 
 ## Deployment - End to End
 
+```
+mkdir -p ~/Sites/boshdeployments/
+cd ~/Sites/boshdeployments/
+curl https://raw.github.com/gist/330a09327fedf4d4b149/a3a0cc8843fd8427a61b20985a8ca35f96ac86d4/manifest.yml > redislive.yml
+```
+
+Now create an IP address in AWS us-east using fog or the AWS console. Say, `1.2.3.3`.
+
+Now replace the example IP `23.23.216.183` with your `1.2.3.4`:
+
+``` yaml
+...
+- name: redislive
+  template: redislive
+  instances: 1
+  resource_pool: common
+  networks:
+  - name: default
+    default:
+    - dns
+    - gateway
+  - name: vip_network
+    static_ips:
+    - 1.2.3.4
+...
+```
+
+Modify the `properties` section to specify the redis databases you want to monitor.
+
+Deploy!
+
+```
+bosh deployment redislive.yml
+bosh deploy
+```
+
+If you are asked for a BOSH user/password, please see Dr Nic for one.
 
 ## Development
 
