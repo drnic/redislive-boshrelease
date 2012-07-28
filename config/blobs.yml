@@ -51,3 +51,7 @@ sqlite/sqlite-autoconf-3070500.tar.gz:
   object_id: 0661d700-6f3f-42d2-b4ff-a2729ef52ea8
   sha: 4e1338497b8da50b84307191bb3418e9ec5715d7
   size: 1551070
+python/pysqlite-2.6.3.tar.gz:
+  object_id: c9167658-cd20-45e5-b4d6-bcbf69e80506
+  sha: d74d7649c5a1e9fb19dfa78c28b163007468a8cf
+  size: 74846
