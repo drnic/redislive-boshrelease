@@ -37,5 +37,5 @@ jobs:
 - name: redislive
   version: 1
   sha1: 1778cda534b969dc3af5b60e2bcf52e4977c9fec
-name: rackapp
+name: redislive
 version: 1
