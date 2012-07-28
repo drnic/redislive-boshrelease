@@ -24,5 +24,25 @@ properties:
 
 A complete example BOSH deployment manifest is [available](https://gist.github.com/330a09327fedf4d4b149).
 
+## Deployment - End to End
+
+
+## Development
+
+To develop this BOSH release, follow the steps below to fetch the source, the RedisLive source and all the package blobs used to build python, redis, etc.
+
+```
+git clone git@github.com:engineyard/redislive-boshrelease.git
+cd redislive-boshrelease
+git submodule update --init
+bosh create release --force
+```
+
+When you want to test a release, upload it and deploy it.
+
+```
+bosh upload release
+bosh deployment path/to/deployments/redislive-dev.yml
+```
 
 
