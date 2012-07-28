@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Control script to start/stop ruby/rack redislive_webapp webapp
+# Control script to start/stop redislive_webapp webapp
 
 RUN_DIR=/var/vcap/sys/run/redislive
 LOG_DIR=/var/vcap/sys/log/redislive

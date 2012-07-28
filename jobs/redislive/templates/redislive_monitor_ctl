@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Control script to start/stop ruby/rack RedisLive job on a BOSH controlled VM
+# Control script to start/stop RedisLive job on a BOSH controlled VM
 
 RUN_DIR=/var/vcap/sys/run/redislive
 LOG_DIR=/var/vcap/sys/log/redislive
