@@ -5,7 +5,7 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 80,   5001
   config.vm.forward_port 8888, 5002
 
-  config.vm.provision :shell, :path => "setup.sh"
+  config.vm.provision :shell, :path => "scripts/vagrant-setup.sh"
 
   if local_bosh_src = ENV['BOSH_SRC']
     config.vm.share_folder "bosh-src", "/bosh", local_bosh_src
