@@ -1,1 +1,53 @@
---- {}
+---
+python/distribute-0.6.28.tar.gz:
+  object_id: 5b87583f-0942-4645-a875-b2b23a0d89d1
+  sha: 709bd97d46050d69865d4b588c7707768dfe6711
+  size: 627530
+python/pip-1.0.tar.gz:
+  object_id: 4458a599-8ad4-4d74-b0de-48b693b45176
+  sha: 822009671932f0dbfc39e325ea529e7feea60bd3
+  size: 100102
+python-pip-RedisLive/python-dateutil-2.1.tar.gz:
+  object_id: 81d09b7f-9ab2-41c3-ae4a-f21148d32c20
+  sha: f0de3003c346b5fb210b42233d4f71298d23826d
+  size: 152334
+python-pip-RedisLive/redis-2.6.0.tar.gz:
+  object_id: 3512583f-1e32-4acf-9033-5e7f86cc5360
+  sha: 9a5ca13c7bbb6b8527acfbf78e54446fecdef922
+  size: 33704
+python-pip-RedisLive/six-1.1.0.tar.gz:
+  object_id: c2da72df-c6e9-4ab2-ab7b-96ff12b2ae9f
+  sha: 2e6ca983a232cfacc94df37a26d641be1ead2524
+  size: 12573
+python-pip-RedisLive/tornado-2.3.tar.gz:
+  object_id: b1e48f42-282d-4944-a6ca-3ab8debb1e50
+  sha: 0abec6acc2ba880caadfda690cdeb73f445bc072
+  size: 338950
+python27/Python-2.7.3.tgz:
+  object_id: 268dddf1-7e54-46c2-a644-7b3ef949a966
+  sha: dbe486dd15022ed32ebbac4e67225e280ba93c3b
+  size: 14135620
+redis/redis-2.4.13.tar.gz:
+  object_id: 6596d4c7-247f-43d4-8c96-ac364e51ab62
+  sha: 212128b1c7cc0021beb3dae38b7fe957d6743f3b
+  size: 625464
+ruby/bundler-1.1.3.gem:
+  object_id: 8a01cb47-6902-4810-9677-9abc8c84fd04
+  sha: 64e3aa4457e3d921d766e88b65265ff8b941b306
+  size: 204288
+ruby/rake-0.8.7.gem:
+  object_id: 1bb87eae-628d-4e8a-a5d9-52776903d248
+  sha: 91daad079d404b68a7dd179716b9fdd0c195144c
+  size: 104960
+ruby/ruby-1.9.2-p180.tar.gz:
+  object_id: 23b189e6-4e45-422f-8969-87fbf6d1f3d0
+  sha: 6a482bc07239b37bcadf68dda63c65d20dc19ebe
+  size: 11158935
+ruby/rubygems-1.8.24.tgz:
+  object_id: fde7ff9f-2f14-4241-b0c3-fad26cb3a206
+  sha: 30f27047e74f7943117736a0d3e224994fee0905
+  size: 380101
+sqlite/sqlite-autoconf-3070500.tar.gz:
+  object_id: 0661d700-6f3f-42d2-b4ff-a2729ef52ea8
+  sha: 4e1338497b8da50b84307191bb3418e9ec5715d7
+  size: 1551070
