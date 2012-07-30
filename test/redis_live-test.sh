@@ -50,6 +50,6 @@ it_runs_redis_live() {
 }
 
 it_runs_redis_monitor() {
-  expected='redis-monitor.py --duration 120'
+  expected='redis-monitor.py --duration 3000'
   test $(ps ax | grep "${expected}" | grep -v 'grep' | wc -l) = 1
 }

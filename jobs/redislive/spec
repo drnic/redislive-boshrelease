@@ -6,6 +6,6 @@ packages:
 - sqlite
 - common
 templates:
-  redislive_monitor_ctl:    bin/redislive_monitor_ctl
-  redislive_webapp_ctl:     bin/redislive_webapp_ctl
-  redis-live.conf.erb:      config/redis-live.conf
+  redislive_monitor_ctl.erb:  bin/redislive_monitor_ctl
+  redislive_webapp_ctl:       bin/redislive_webapp_ctl
+  redis-live.conf.erb:        config/redis-live.conf
